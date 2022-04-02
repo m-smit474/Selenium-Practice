@@ -10,12 +10,12 @@ driver.implicitly_wait(5)
 
 cookie = driver.find_element_by_id("bigCookie")
 cookieCount = driver.find_element_by_id("cookies")
-upgrades = [driver.find_element_by_id("product" + str(i)) for i in range(0, 1)]
+upgrades = [driver.find_element_by_id("product" + str(i)) for i in range(1, -1, -1)]
 
 actions = ActionChains(driver)
 actions.click(cookie)
 
-for i in range(5000):
+for i in range(500000):
     actions.perform()
     count = int(cookieCount.text.split(" ")[0])
     
