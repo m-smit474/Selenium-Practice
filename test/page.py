@@ -5,7 +5,8 @@ from element import BasePageElement
 
 class SearchTextElement(BasePageElement):
     # name for search bar
-    locator = "q"
+    #locator = "q"
+    locator = MainPageLocators.SEARCH_BAR[1]
 
 class BasePage(object):
     # Base class to initalize the base page that will be called by all pages.
